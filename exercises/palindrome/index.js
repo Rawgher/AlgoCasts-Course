@@ -7,6 +7,36 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+
+  // my initial answer
+  let reversed = '';
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+
+  if (str === reversed) {
+    return true
+  } else {
+    return false
+  }
+
+  // MY OTHER POSSIBLE ANSWERS
+  // reversed = [...str].reverse().join('');
+  // return str === reversed
+
+  // reversed = str.split('').reverse().join('');
+  // return str === reversed
+
+  // reversed = str.split('').reduce((rev, char) => char + rev, '');
+  // return str === reversed
+
+  // COURSE OTHER POSSIBLE ANSWER
+  // .every is using a comparison on every element of an array - this isn't as optimal of a solution since it does extra work
+  // comparing every character to the on at the end of the array moving inward with every iteration
+  // return [...str].every((char, i) => {
+  //   return char === str[str.length - i - 1];
+  // });
+}
 
 module.exports = palindrome;

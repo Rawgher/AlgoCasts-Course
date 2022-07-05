@@ -21,7 +21,7 @@ function reverse(str) {
   // Third solution - similar to the first option
   // return str.split('').reverse().join('');
 
-  // Fourth solution - reduct function takes the last thing returned and puts it back into the calculation
+  // Fourth solution - reduce function takes the last thing returned and puts it back into the calculation
   return str.split('').reduce((rev, char) => char + rev, '');
 }
 
